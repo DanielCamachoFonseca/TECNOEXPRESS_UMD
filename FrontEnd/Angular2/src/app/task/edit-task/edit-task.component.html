@@ -1,0 +1,31 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Tasks Editing System</h4>
+                        <p class="card-category">Daily Tasks</p>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="">Purpose: </label>
+                                <input [(ngModel)]="task.purpose" name="purpose" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Date Stay: </label>
+                                <input [(ngModel)]="task.dateStay" name="dateStay" type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Date Solution: </label>
+                                <input [(ngModel)]="task.dateSolution" name="dateSolution" type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Task: </label>
+                                <input [(ngModel)]="task.task" name="task" type="text" class="form-control">
+                            </div>
+                            <button (click)="Update(task)" class="btn btn-danger">Update</button>
+                        </form>
+                    </div>
+                </div>

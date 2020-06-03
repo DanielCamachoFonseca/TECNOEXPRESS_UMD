@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">System Employee Tasks</h4>
+                        <p class="card-category">Daily Tasks</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Id-Task</th>
+                                        <th class="text-center">Purpose</th>
+                                        <th class="text-center">Date Stay</th>
+                                        <th class="text-center">Date Solution</th>
+                                        <th class="text-center">Task</th>
+                                        <th class="text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let task of tasks" class="text-center">
+                                        <td>{{ task.idTask }}</td>
+                                        <td>{{ task.purpose }}</td>
+                                        <td>{{ task.dateStay }}</td>
+                                        <td>{{ task.dateSolution }}</td>
+                                        <td>{{ task.task }}</td>
+                                        <td>
+                                            <button (click)="Edit(task)" class="btn btn-warning">Edit</button>
+                                            <button (click)="Delete(task)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
